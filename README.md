@@ -43,6 +43,8 @@ agent {
     }
 }
 
+```
+
 ## Why Use Docker as an Agent?
 
 ### Benefits:
