@@ -131,7 +131,7 @@ This process eliminates manual intervention, reduces the risk of configuration d
 ```bash
 git clone https://github.com/your-username/java-maven-sonar-argocd-k8s.git
 cd java-maven-sonar-argocd-k8s
-
+```
 
 ## Configure Jenkins
 
@@ -166,6 +166,6 @@ java-maven-sonar-argocd-helm-k8s/
 ├── Jenkinsfile                     # CI/CD pipeline definition
 ├── README.md                       # Project documentation
 
-
+```
 
 
