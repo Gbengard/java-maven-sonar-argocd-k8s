@@ -1,5 +1,4 @@
-# Jenkins Pipeline for Java based application using Maven, SonarQube, Argo CD, and Kubernetes
- (GitOps-Driven)
+# Jenkins Pipeline for Java based application using Maven, SonarQube, Argo CD, and Kubernetes (GitOps-Driven)
 
 ![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
 
