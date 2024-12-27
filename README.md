@@ -14,7 +14,7 @@ The project emphasizes automation, reproducibility, and traceability by integrat
    - The Jenkins pipeline uses a Docker container as its build agent, providing a clean and isolated environment for each pipeline run.
 
 2. **End-to-End Automation**:  
-   - Builds, tests, and performs static code analysis automatically.  
+   - Builds, tests, and performs static code analysis automatically. 
    - Creates and pushes container images to Docker Hub.  
    - Updates deployment manifests with a shell script.  
 
@@ -67,7 +67,7 @@ In this project, the `abhishekf5/maven-abhishek-docker-agent:v1` image includes 
 
 ## Pipeline Workflow
 
-![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
+![Pipeline Workflow](images/pipeline.png)
 
 The CI/CD pipeline is defined in the `Jenkinsfile` and includes the following stages:
 
@@ -75,7 +75,7 @@ The CI/CD pipeline is defined in the `Jenkinsfile` and includes the following st
    Clones the repository to fetch the latest code.
 
 2. **Build and Test**:  
-   Compiles the code, packages it into a JAR file, and runs unit tests.
+   Compiles the code, packages it into a JAR file.
 
 3. **Static Code Analysis**:  
    Analyzes the code using SonarQube for improved code quality.
@@ -83,6 +83,8 @@ The CI/CD pipeline is defined in the `Jenkinsfile` and includes the following st
 4. **Build and Push Docker Image**:  
    - Builds a container image for the application.  
    - Tags the image with the Jenkins build number and pushes it to Docker Hub.
+
+      ![dockerhub](images/dockerhub.png)
 
 5. **Update Deployment File**:  
    - Updates the Kubernetes deployment manifest with the new Docker image version using a shell script.  
@@ -119,13 +121,13 @@ This process eliminates manual intervention, reduces the risk of configuration d
 
 ### **SonarQube**:
 
-![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
+![Sonarqube](images/sonarqube.png)
 
 - An instance of SonarQube integrated with Jenkins using Token created on Sonarqube for code analysis. SonarQube analyzes the Java application to improve its code quality and maintainability by performing static code analysis.
 
 ### **ArgoCD**:
 
-![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
+![argocd-k8s](images/argocd.png)
 
 - Deployed in your Kubernetes cluster.  
 - Configured to monitor this repository and sync deployment changes.
@@ -163,6 +165,15 @@ Trigger the pipeline in Jenkins. It will:
 ## GitOps Deployment
 
 ArgoCD will detect the updated deployment manifest and deploy the application to the Kubernetes cluster automatically.
+
+---
+
+## The Visual
+
+Here is the look of the the website
+
+![argocd-k8s](images/java.png)
+
 
 ---
 
