@@ -67,6 +67,8 @@ In this project, the `abhishekf5/maven-abhishek-docker-agent:v1` image includes 
 
 ## Pipeline Workflow
 
+![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
+
 The CI/CD pipeline is defined in the `Jenkinsfile` and includes the following stages:
 
 1. **Checkout**:  
@@ -116,9 +118,15 @@ This process eliminates manual intervention, reduces the risk of configuration d
   - Docker Pipeline, SonarQube Scanner, Pipeline: Groovy.
 
 ### **SonarQube**:
-- An instance of SonarQube integrated with Jenkins using Token created on Sonarqube for code analysis.
+
+![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
+
+- An instance of SonarQube integrated with Jenkins using Token created on Sonarqube for code analysis. SonarQube analyzes the Java application to improve its code quality and maintainability by performing static code analysis.
 
 ### **ArgoCD**:
+
+![java-maven-sonar-argocd-k8s](images/java-maven-sonar-argocd-k8s.png)
+
 - Deployed in your Kubernetes cluster.  
 - Configured to monitor this repository and sync deployment changes.
 
@@ -139,6 +147,7 @@ cd java-maven-sonar-argocd-k8s
 2. **Define the necessary credentials**:  
    - `docker-cred`: Docker Hub credentials.  
    - `github`: GitHub Personal Access Token.
+   - `Sonar` : SonaQube Personal Access Token
 
 ---
 
