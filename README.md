@@ -157,7 +157,7 @@ ArgoCD will detect the updated deployment manifest and deploy the application to
 
 ---
 
-## Example Directory Structure
+## Directory Structure
 
 ```bash
 java-maven-sonar-argocd-helm-k8s/
